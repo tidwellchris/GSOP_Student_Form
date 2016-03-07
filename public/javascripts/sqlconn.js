@@ -12,7 +12,7 @@ var schoolTable = '';
 var conn = mysql.createConnection({ 
   connectionLimit : connLimit,
   host            : hst,
-  user            : mysqlUser',
+  user            : mysqlUser,
   password        : mysqlPass,
   database        : dbs
 });
