@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Form</title>
+<link rel="stylesheet" type="text/css" href="../stylesheets/view.css" media="all">
+<script type="text/javascript" src="../javascripts/view.js"></script>
+<script type="text/javascript" src="../javascripts/calendar.js"></script>
+</head>
+<body id="main_body" >
+
+	<img id="top" src="../images/top.png" alt="">
+	<div id="form_container">
+
+		<h1><a>GSOP Student Registration</a></h1>
+		<form id="form_1105552" class="appnitro"  method="post" action="">
+					<div class="form_description">
+			<h2>GSOP Student Registration</h2>
+			<p>This form is for new students to register for for GSOP Classes</p>
+		</div>
+			<ul >
+
+					<li id="li_1" >
+		<label class="description" for="fName">First Name </label>
+		<div>
+			<input id="fName" name="fName" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_2" >
+		<label class="description" for="mName">Middle Name </label>
+		<div>
+			<input id="mName" name="mName" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_3" >
+		<label class="description" for="lName">Last Name </label>
+		<div>
+			<input id="lName" name="lName" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_4" >
+		<label class="description" for="nName">Nick Name </label>
+		<div>
+			<input id="nName" name="nName" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_12" >
+		<label class="description" for="Gender">Gender </label>
+		<div>
+		<select class="element select medium" id="Gender" name="Gender">
+			<option value="" selected="selected"></option>
+<option value="1" >Male</option>
+<option value="2" >Female</option>
+
+		</select>
+		</div>
+		</li>		<li id="li_5" >
+		<label class="description" for="DOB">Date of Birth </label>
+		<span>
+			<input id="DOB1" name="element_5_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="DOB1">MM</label>
+		</span>
+		<span>
+			<input id="DOB2" name="element_5_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+			<label for="DOB2">DD</label>
+		</span>
+		<span>
+	 		<input id="DOB3" name="element_5_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="DOB3">YYYY</label>
+		</span>
+
+		<span id="calendar_5">
+			<img id="cal_img_5" class="datepicker" src="../images/calendar.gif" alt="Pick a date.">
+		</span>
+		<script type="text/javascript">
+			Calendar.setup({
+			inputField	 : "element_5_3",
+			baseField    : "element_5",
+			displayArea  : "calendar_5",
+			button		 : "cal_img_5",
+			ifFormat	 : "%B %e, %Y",
+			onSelect	 : selectDate
+			});
+		</script>
+
+		</li>		<li id="li_6" >
+		<label class="description" for="pLang">Primary Language </label>
+		<div>
+			<input id="pLang" name="pLang" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_7" >
+		<label class="description" for="element_7">Phone </label>
+		<span>
+			<input id="element_7_1" name="element_7_1" class="element text" size="3" maxlength="3" value="" type="text"> -
+			<label for="element_7_1">(###)</label>
+		</span>
+		<span>
+			<input id="element_7_2" name="element_7_2" class="element text" size="3" maxlength="3" value="" type="text"> -
+			<label for="element_7_2">###</label>
+		</span>
+		<span>
+	 		<input id="element_7_3" name="element_7_3" class="element text" size="4" maxlength="4" value="" type="text">
+			<label for="element_7_3">####</label>
+		</span>
+
+		</li>		<li id="li_11" >
+		<label class="description" for="cPath">Course Path </label>
+		<div>
+		<select class="element select medium" id="cPath" name="cPath">
+			<option value="" selected="selected"></option>
+<option value="1" >Preaching Certificate</option>
+<option value="2" >Biblical Studies</option>
+<option value="3" >Audit</option>
+
+		</select>
+		</div>
+		</li>		<li id="li_8" >
+		<label class="description" for="email">Email Address </label>
+		<div>
+			<input id="email" name="email" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_9" >
+		<label class="description" for="username">Username </label>
+		<div>
+			<input id="username" name="username" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_10" >
+		<label class="description" for="password">Desired Password </label>
+		<div>
+			<input id="password" name="password" class="element text medium" type="text" maxlength="255" value=""/>
+		</div>
+		</li>		<li id="li_13" >
+		<label class="description" for="campus">Campus </label>
+		<div>
+		<select class="element select medium" id="campus" name="campus">
+			<option value="" selected="selected"></option>
+<option value="1" >Avondale Campus</option>
+<option value="2" >Buford Campus</option>
+<option value="3" >Dasher Campus</option>
+<option value="4" >Ellijay Campus</option>
+<option value="5" >Fayetteville Campus</option>
+<option value="6" >Marietta Campus</option>
+<option value="7" >Moultrie Campus</option>
+<option value="8" >Munford/Alabama Campus</option>
+<option value="9" >Villa Rica Campus</option>
+<option value="10" >Warner Robins Campus</option>
+
+		</select>
+		</div>
+		</li>
+
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="1105552" />
+
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>
+		<div id="footer">
+		</div>
+	</div>
+	<img id="bottom" src="../images/bottom.png" alt="">
+	</body>
+</html>
