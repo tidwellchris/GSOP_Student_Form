@@ -8,14 +8,23 @@ var stuTable    = '';
 var usrTable    = '';
 var schoolTable = '';
 
-
-var conn = mysql.createConnection({ 
-  connectionLimit : connLimit,
-  host            : hst,
-  user            : mysqlUser,
-  password        : mysqlPass,
-  database        : dbs
+var pool = mysql.createPool({
+  connectionLimit: connLimit,
+  host: hst,
+  user: mysqlUser,
+  password: mysqlPass,
+  database: dbs
 });
+console.log('Connection setup');
+
+
+// var conn = mysql.createConnection({ 
+//   connectionLimit : connLimit,
+//   host            : hst,
+//   user            : mysqlUser,
+//   password        : mysqlPass,
+//   database        : dbs
+// });
 
 
 // var mysql   = require('mysql');
