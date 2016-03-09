@@ -14,6 +14,11 @@ app.get("/",function(req, res){
   res.sendfile("public/html/form.html");
 });
 
+//Check for email on focus out
+// $('#txtEmail').focusout(function(){
+//     checkEmail();
+// });
+
 //get responses of the html form
 app.post('/', function(req, res){
   var username = req.body.user;
