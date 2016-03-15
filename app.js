@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var http = require('http');
 var dbquery = require('./objects/db');
-var server = http.createServer(app);
+//var server = http.createServer(app);
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -29,13 +29,18 @@ app.get("/",function(req, res, formData){
   res.sendfile("public/html/form.html");
 });
 
+
+
 //get responses of the html form
 app.post('/', function(req, res){
 
 var db = new dbquery();
+
 try{
   db.getformData(function(formData){
+    console.log(JSON.stringify(formData));
     if (formData === undefined){
+      console.log('in the undefined');
       res.sendStatus(404);
     } else {
         formData = req.body;
@@ -45,6 +50,7 @@ try{
       }
     });
   } catch (err){
+    console.log('You have an issue!');
     res.sendStatus(500);
   }
 });

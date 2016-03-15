@@ -8,7 +8,7 @@
 
 
 var sqlConn = require("./sqlconn");
-
+console.log('On the DB page ');
 
 
 var db = function(){
@@ -19,16 +19,17 @@ var db = function(){
     //   sqlConn.Pool.query('insert into table')
     //   sqlConn.Pool.query('insert into table')
 
-      // connection.release();
-    // if(err){
-    //   console.log('db.getFormData Err:' ,err);
-    //   throw err;
-    // }
+      connection.release();
+      if (err){
+        console.log('db.getFormData err: ', err);
+        throw err;
+      }
+
     });
   }
 }
 
-
+module.exports = db;
 
 
 
