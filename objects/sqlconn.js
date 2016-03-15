@@ -1,4 +1,4 @@
-var mysql       = require(mysql);
+var mysql       = require('mysql');
 var connLimit   = 50;
 var hst         = 'mysql.server266.com';
 var mysqlUser   = 'dgsopb';
@@ -17,8 +17,9 @@ var pool = mysql.createPool({
 });
 console.log('Connection setup');
 
+exports.Pool = pool;
 
-// var conn = mysql.createConnection({ 
+// var conn = mysql.createConnection({
 //   connectionLimit : connLimit,
 //   host            : hst,
 //   user            : mysqlUser,

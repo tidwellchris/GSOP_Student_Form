@@ -7,23 +7,51 @@
 // });
 
 
-// var sqlConn = require("./sqlconn");
+var sqlConn = require("./sqlconn");
+
+
+
+var db = function(){
+  this.getFormData = function(formData, callback){
+    console.log('In the DB Page :' +formData);
+    sqlConn.Pool.getConnection(function(err, connection){
+    //   sqlConn.Pool.query('insert into table')
+    //   sqlConn.Pool.query('insert into table')
+    //   sqlConn.Pool.query('insert into table')
+
+      // connection.release();
+    // if(err){
+    //   console.log('db.getFormData Err:' ,err);
+    //   throw err;
+    // }
+    });
+  }
+}
+
+
+
+
+
 
 // var db = function() {
-//   this.getRoom=function(room, callback){
-//     sqlConn.Pool.getConnection(function (err,connection) {
-//       sqlConn.Pool.query('select a.RoomName, a.rmId, a.SVGName, b.location, b.building, b.flr, b.locid from Room a join Location b on a.locid = b.locid where roomname = ?;', [room], function(err, rows) {
-//       //  console.log('Query is using ' + room +' this based off user search');
-//         connection.release();
-//         if (err) {
-//           console.log('db.GetRoom err: ',err);
-//           throw err;
-//         }
+//      sqlConn.Pool.getConnection(function (err,connection) {
+//        sqlConn.Pool.query('select a.RoomName, a.rmId, a.SVGName, b.location, b.building, b.flr, b.locid from Room a join Location b on a.locid = b.locid where roomname = ?;', [room], function(err, rows) {
+//        //  console.log('Query is using ' + room +' this based off user search');
+//          connection.release();
+//          if (err) {
+//            console.log('db.GetRoom err: ',err);
+//            throw err;
+//          }
+//
+//          callback( rows[0] );
+//          });
+//      });
+//    }
 
-//         callback( rows[0] );
-//         });
-//     });
-//   }
+
+//}
+
+
 //   this.getRooms = function(callback){
 //     sqlConn.Pool.getConnection(function (err,connection) {
 //     //  console.log('Here is the Erro for Connection: ' + err);
